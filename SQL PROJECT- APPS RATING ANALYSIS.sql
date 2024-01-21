@@ -8,16 +8,18 @@ union ALL
 select * from appleStore_description4;
 
 --EXPLORATORY DATA ANALYSIS--
+
 ---Check The Number of Unique Apps in both TableAppleStore
+
 select count(distinct id) as UniqueAppsIds
 from AppleStore
 
 select count(distinct id) as UniqueAppsIds
 from appleStore_description_combine
 
---Check for Any Missing Values in key fieldsAppleStore
+--Check for Any Missing Values in key Fields
 
-select  count(*) as missingvalues
+select  count(*) as MissingValues
 from AppleStore
 where track_name is NULL OR user_rating is NULL or prime_genre is null
 
